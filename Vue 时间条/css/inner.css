@@ -1,0 +1,127 @@
+div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+textarea {resize: none;}
+#head { line-height: normal!important; }
+#head>div{ vertical-align: middle; display: table-cell; }
+.user { float: none!important; width:265px!important; height:60px!important;}
+.inner-head-tip{ color: rgba(255,255,255, 0.9); width: 70px; font-size: 14px; line-height: 20px; text-align: center; position: relative; }
+.inner-head-tip span{ cursor: pointer; text-align: right; display: inline-block; background: url(../img/i_t.png) top left no-repeat; }
+.inner-head-btn{ width: 50px; text-align: center; }
+.inner-head-btn span{ width: 36px; height: 36px; display: none; cursor: pointer; }
+.inner-head-btn.stop span.btn-start{ display: inline-block; background: url(../img/play.png) center center no-repeat; }
+.inner-head-btn.start span.btn-stop{ display: inline-block; background: url(../img/pause.png) center center no-repeat; }
+
+.tlist {
+    width:auto!important;
+    height: auto!important;
+    background-color: #fff;
+}
+/*隐藏topo图的描边*/
+.node rect {
+    stroke-width: 0px;
+    stroke: #bbb;
+    fill: rgba(0,0,0,0);
+}
+.tlbox {margin-bottom: 0!important;}
+/*.tlist { width:168px;height: 126px;background-color: #fff}*/
+
+/*input[type=button].button,a.button,button.button { display:inline-block; height:26px; background:#fff; width:100px; margin:6px 2px; text-align:center; line-height:26px; color:#666; font-size:12px; border:#dbdbdb 1px solid; padding:0;}*/
+/*input[type=button].button:hover,a.button:hover,button.button:hover { background:#3399db; border:#3399db 1px solid; color:#fff;}*/
+
+
+div.fixed-table-container {
+    border-radius: 0;
+}
+
+
+.ttcell {position: relative;}
+.cursor {
+    cursor: pointer;
+}
+
+.open>.drop-panel { display:block;}
+.drop-panel {
+    -webkit-animation-duration:.35s !important;;
+    animation-duration:.35s !important;;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175) !important;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175) !important;;
+}
+.drop-panel li>label {
+    display: block;
+    cursor: pointer;
+}
+.drop-panel li:hover {
+    background-color: #f5f5f5;
+}
+
+/***覆盖样式***/
+.cdiv {
+    padding: 0 !important;
+}
+.addc label {
+    display: block;
+}
+.addc input[type=text]{
+    width: calc(100% - 18px);
+}
+
+.pull-left{float: left}
+.pull-right{float: right}
+
+.menu a ,.menu span { float:left; line-height:22px; border:#f5f5f5 1px solid; padding:0 5px; cursor:pointer; color:#000;}
+
+.ttcell h3>span {cursor:pointer;}
+
+.drop-panel .drop-panel-footer {
+    text-align: center;
+}
+.drop-panel .drop-panel-footer input[type=button],
+.drop-panel .drop-panel-footer button {
+    margin: 0;
+    float: none;
+    padding: 1px 6px;
+}
+
+
+.dotting {
+    display: inline-block; width: 10px; min-height: 2px;
+    padding-right: 2px;
+    border-left: 2px solid currentColor; border-right: 2px solid currentColor;
+    background-color: currentColor; background-clip: content-box;
+    box-sizing: border-box;
+    animation: dot 3s infinite step-start both;
+    -webkit-animation: dot 3s infinite step-start both;
+    -moz-animation: dot 3s infinite step-start both;
+}
+.dotting:before { content: '...'; } /* IE8 */
+.dotting::before { content: ''; }
+:root .dotting { margin-left: 2px; padding-left: 2px; } /* IE9+ */
+
+@keyframes dot {
+    25% { border-color: transparent; background-color: transparent; }          /* 0个点 */
+    50% { border-right-color: transparent; background-color: transparent; }    /* 1个点 */
+    75% { border-right-color: transparent; }                                   /* 2个点 */
+}
+@-webkit-keyframes dot {
+    25% { border-color: transparent; background-color: transparent; }          /* 0个点 */
+    50% { border-right-color: transparent; background-color: transparent; }    /* 1个点 */
+    75% { border-right-color: transparent; }                                   /* 2个点 */
+}
+@-moz-keyframes dot {
+    25% { border-color: transparent; background-color: transparent; }          /* 0个点 */
+    50% { border-right-color: transparent; background-color: transparent; }    /* 1个点 */
+    75% { border-right-color: transparent; }                                   /* 2个点 */
+}
+.alarm01Color { color:#f00;}
+.alarm02Color { color:#ff7300;}
+.alarm03Color { color:#ffba00;}
+
+.sdown ul>li {
+    word-wrap: break-word;
+    word-break: break-all;
+    height: auto;
+}
+

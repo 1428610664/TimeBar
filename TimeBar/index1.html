@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<!-- <link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/inner.css" /> -->
+
+<link rel="stylesheet" href="css/TimeChooser.css" />
+<script type="text/javascript" src="js/jquery-1.js" ></script>
+<script type="text/javascript" src="js/jquery-ui-1.js" ></script>
+<script type="text/javascript" src="js/WdatePicker.js" ></script>
+<script type="text/javascript" src="js/common.js" ></script>
+<script type="text/javascript" src="js/TimeChooser.js" ></script>
+<style>
+	
+body,ul,ol,p,h1,h2,h3,h4,dl,dd,form,input,textarea,select{margin:0px;padding:0px;}
+body{font-size:12px;font-family:"微软雅黑";color:#000;}
+img{border:none;}
+a{text-decoration:none;}
+ul,li{list-style:none;}
+input,select,option,textarea{outline:none;font-family:inherit;}
+a,button,input,optgroup,select,textarea,span,div{-webkit-tap-highlight-color:rgba(0,0,0,0); }
+input,textarea{-webkit-appearance: none;}
+textarea{overflow:auto;resize:none;vertical-align:top;}
+.clear:before,.clear:after{content:" ";display:table}
+.clear:after{clear:both}
+.clear{*zoom:1}
+
+div{-webkit-box-sizing: border-box;-moz-box-sizing: border-box; box-sizing: border-box;}
+
+#head{display:table;position:relative;z-index:1002;width:100%;height:60px;line-height:60px;background:#1577b6;}
+#head{ line-height: normal!important; }
+#head .htime { display:table-cell;}
+#head>div{ vertical-align: middle; display: table-cell; }
+#head .logo{display:table-cell;width:300px;height:60px;background:#1577b6;}
+.inner-head-tip{color:rgba(255,255,255,0.9);width:70px;font-size:14px;line-height:20px;text-align:center;position:relative;}
+.inner-head-btn{width:50px;text-align:center;}
+.user{float:none!important;width:265px!important;height:60px!important;}
+
+
+</style>
+</head>
+<body>
+
+<div id="head" style="background: rgb(37, 130, 190) none repeat scroll 0% 0%;">
+    <h1 class="logo" style="background: red;"></h1>
+    
+    <div id="timePanel" class="htime CW-TimeChooser">
+		<div class="hour"></div><div class="minute"></div>
+	</div>
+    <div id="timeTip" class="inner-head-tip" style="">
+        <input id="timeTipInput" type="hidden">
+        <span>10-22<br>04:28:32</span>
+    </div>
+    <div id="refreshBtn" class="inner-head-btn start" style="">
+        <span class="btn-stop" title="暂停" onclick="Inner.Header.stop();">暂停</span>
+        <span class="btn-start" title="开始" onclick="Inner.Header.start();">开始</span>
+    </div>
+
+    <div id="login" class="user logon" style="background: red;"></div>
+
+</div>
+
+<script type="text/javascript">
+
+	$(function(){
+		Inner.Header.init(function(selectedDate){
+			console.log(selectedDate)
+		})
+	})
+
+</script>
+
+</body>
+</html>
